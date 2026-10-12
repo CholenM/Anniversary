@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>To My Babyyyy &middot; Andria</title>
+<meta name="description" content="Every photo I kept, in the order they happened.">
+<meta name="theme-color" content="#0a0e14">
+<meta property="og:title" content="To My Babyyyy">
+<meta property="og:description" content="Every photo I kept, in the order they happened.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%F0%9F%92%97%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+
+:root{
+  --bg:#0a0e14;
+  --bg-soft:#111823;
+  --ink:#e9eff7;
+  --muted:#93a3b8;
+  --blue:#5aa9f0;
+  --blue-deep:#2f6fb5;
+  --line:rgba(90,169,240,.26);
+  --maxw:620px;
+}
+
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+/* soft blue wash top and bottom so photos stay the focus */
+body::before,body::after{
+  content:'';position:fixed;left:0;right:0;height:46vh;
+  pointer-events:none;z-index:0;
+}
+body::before{top:0;background:linear-gradient(180deg,rgba(47,111,181,.30),transparent)}
+body::after{bottom:0;background:linear-gradient(0deg,rgba(47,111,181,.26),transparent)}
+
+main{position:relative;z-index:1}
+
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+/* ---------- hero ---------- */
+.hero{
+  min-height:92vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;
+  padding:18vh 22px 10vh;
+}
+.eyebrow{
+  font-size:11px;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--blue);margin:0 0 22px;font-weight:500;
+}
+.hero h1{
+  font-family:'Fraunces',Georgia,serif;
+  font-size:clamp(2.5rem,12vw,4.1rem);
+  font-weight:600;line-height:1.05;margin:0;
+  letter-spacing:-.015em;
+  background:linear-gradient(160deg,#ffffff 8%,var(--blue) 92%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.rule{width:52px;height:2px;background:var(--blue);margin:30px auto;border-radius:2px}
+.hero .lede{color:var(--muted);max-width:34ch;margin:0 auto;font-size:16px}
+.hero .for{color:var(--ink);font-weight:500}
+.scroll-cue{
+  margin-top:auto;padding-top:12vh;font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--muted);
+}
+.scroll-cue span{display:block;margin-top:10px;font-size:16px;color:var(--blue);animation:drift 2.2s ease-in-out infinite}
+@keyframes drift{0%,100%{transform:translateY(0);opacity:.55}50%{transform:translateY(7px);opacity:1}}
+
+/* ---------- chapters ---------- */
+.chapter{padding:7vh 0}
+.stamp{
+  display:flex;align-items:center;gap:12px;margin-bottom:6px;flex-wrap:wrap;
+}
+.stamp::before{
+  content:'';width:6px;height:6px;border-radius:50%;
+  background:var(--blue);flex:none;
+  box-shadow:0 0 0 4px rgba(90,169,240,.16);
+}
+.stamp .date{
+  font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--blue);font-weight:600;white-space:nowrap;
+}
+.stamp .place{
+  font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);font-weight:400;line-height:1.5;
+}
+.sub{color:var(--muted);font-size:14.5px;font-style:italic}
+
+figure{margin:24px 0 0}
+.frame{
+  border-radius:16px;overflow:hidden;background:var(--bg-soft);
+  box-shadow:0 18px 44px -18px rgba(0,0,0,.9);
+  cursor:zoom-in;
+}
+.frame img{
+  display:block;width:100%;height:auto;
+  transition:transform .55s cubic-bezier(.2,.7,.3,1);
+}
+.frame:hover img{transform:scale(1.02)}
+
+/* framing tweaks */
+figure.small .frame{max-width:58%;margin:0 auto}
+figure.screenshot .frame{max-width:66%;margin:0 auto;border:1px solid var(--line);border-radius:22px}
+figure.wide .frame{border-radius:14px}
+
+figcaption{
+  margin-top:18px;color:var(--muted);font-size:15.5px;font-style:italic;
+  line-height:1.72;
+}
+
+/* ---------- closing ---------- */
+/* vertical only -- a `padding` shorthand here would clobber the
+   horizontal padding .wrap supplies and run text to the screen edge */
+.closing{
+  padding-top:22vh;padding-bottom:20vh;text-align:center;
+}
+.closing h2{
+  font-family:'Fraunces',Georgia,serif;
+  font-size:clamp(2rem,9vw,3.1rem);font-weight:600;
+  line-height:1.12;margin:0 0 26px;letter-spacing:-.01em;
+  background:linear-gradient(160deg,#ffffff 10%,var(--blue) 95%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.closing p{color:var(--muted);max-width:36ch;margin:0 auto 34px}
+.closing .sign{
+  color:var(--ink);font-style:italic;font-size:17px;
+  font-family:'Fraunces',Georgia,serif;
+}
+
+/* ---------- reveal on scroll ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .85s ease,transform .85s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- lightbox ---------- */
+.lightbox{
+  position:fixed;inset:0;z-index:50;display:none;
+  align-items:center;justify-content:center;padding:20px;
+  background:rgba(5,8,12,.96);backdrop-filter:blur(6px);
+}
+.lightbox.open{display:flex}
+.lightbox img{
+  max-width:100%;max-height:100%;border-radius:10px;
+  box-shadow:0 24px 70px -20px rgba(0,0,0,1);
+}
+.lightbox button{
+  position:absolute;top:16px;right:16px;
+  width:44px;height:44px;border-radius:50%;
+  background:rgba(255,255,255,.1);border:1px solid var(--line);
+  color:#fff;font-size:22px;line-height:1;cursor:pointer;
+}
+.hint{
+  text-align:center;font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted);padding:14px 22px 0;
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .frame img{transition:none}
+  .scroll-cue span{animation:none}
+}
+
+@media (min-width:760px){
+  :root{--maxw:680px}
+  .chapter{padding:9vh 0}
+}
+</style>
+</head>
+<body>
+
+<main>
+
+  <header class="hero reveal">
+    <p class="eyebrow">To My Babyyyy</p>
+    <h1>To My<br>Babyyyy</h1>
+    <div class="rule"></div>
+    <p class="lede">Every photo I kept, in the order they happened.<br>For <span class="for">Andria</span>.</p>
+    <p class="scroll-cue">Scroll<span>&darr;</span></p>
+  </header>
+
+  <div class="wrap">
+    <section class="chapter reveal">
+      <div class="stamp">
+        <span class="date">My Favorite Photo Of You Baby</span>
+        <span class="place">April 2025 &middot; So elegant</span>
+      </div>
+      <figure class="small">
+        <div class="frame">
+          <img src="photos/img_5516-1.jpg" alt="April 2014 &middot; eleven years early &mdash; Before us"
+               width="480" height="480" loading="lazy" decoding="async">
+        </div>
+        <figcaption>Your smile in that moment, so bright and full of life. This was after our moment resting on the laboratory</figcaption>
+      </figure>
+    </section>
+    <section class="chapter reveal">
+      <div class="stamp">
+        <span class="date">April 22, 2025</span>
+        <span class="place">Our First Date</span>
+      </div>
+      <figure>
+        <div class="frame">
+          <img src="photos/img_5710-1.jpg" alt="Where it starts &mdash; April 22, 2025"
+               width="900" height="1200" loading="lazy" decoding="async">
+        </div>
+        <figcaption>Our first window shopping, mwhehehehehe. I love it every moment spent with you baby.</figcaption>
+      </figure>
+    </section>
+    <section class="chapter reveal">
+      <div class="stamp">
+        <span class="date">April 28, 2025</span>
+        <span class="place">The golden hallway</span>
+      </div>
+      <figure>
+        <div class="frame">
+          <img src="photos/img_0122-1.jpg" alt="The golden hallway &mdash; April 28, 2025"
+               width="900" height="1200" loading="lazy" decoding="async">
+        </div>
+        <figcaption>You leaned your head on my shoulder like it was the most natural thing in the world. It was.</figcaption>
+      </figure>
+    </section>
+    <section class="chapter reveal">
+      <div class="stamp">
+        <span class="date">May 29, 2025</span>
+        <span class="place">The Mirror Selfie i really like</span>
+      </div>
+      <figure>
+        <div class="frame">
+          <img src="photos/img_0274-1.jpg" alt="Things we did not need &mdash; May 29, 2025"
+               width="900" height="1200" loading="lazy" decoding="async">
+        </div>
+        <figcaption>After resting on the lab, you looked in the mirror and smiled. That moment was perfect. i love how we look so good on the mirror.</figcaption>
+      </figure>
+    </section>
+    <section class="chapter reveal">
+      <div class="stamp">
+        <span class="date">June 9, 2025</span>
+        <span class="place">Hallway Selfiee</span>
+      </div>
+      <figure class="screenshot">
+        <div class="frame">
+          <img src="photos/img_3010.jpg" alt="Screenshot of a story &mdash; June 9, 2025"
+               width="554" height="1200" loading="lazy" decoding="async">
+        </div>
+        <figcaption>This is the moment we captured on the hallway, i really liked it. My friends notice us and they like our power duo and this was the first time people noticed my weight and i started looking different, thank you baby.</figcaption>
+      </figure>
+    </section>
+    <section class="chapter reveal">
+      <div class="stamp">
+        <span class="date">July 4, 2025</span>
+        <span class="place">Our Go To Place - 24 Chicken</span>
+      </div>
+      <figure>
+        <div class="frame">
+          <img src="photos/img_3460-1.jpg" alt="Matching lanyards &mdash; July 4, 2025"
+               width="900" height="1200" loading="lazy" decoding="async">
+        </div>
+        <figcaption>One table, one evening, and you still leaned into me like we were the only two people in the room.</figcaption>
+      </figure>
+    </section>
+    <section class="chapter reveal">
+      <div class="stamp">
+        <span class="date">November 19, 2025</span>
+        <span class="place">In between all the work</span>
+      </div>
+      <figure>
+        <div class="frame">
+          <img src="photos/img_3674.jpg" alt="In between all the work &mdash; November 19, 2025"
+               width="900" height="1200" loading="lazy" decoding="async">
+        </div>
+        <figcaption>Right in the middle of everything we had to do, you let me hold you in the hallway. Quietly. In front of everyone.</figcaption>
+      </figure>
+    </section>
+    <section class="chapter reveal">
+      <div class="stamp">
+        <span class="date">Late 2025</span>
+        <span class="place">Meeting the Robo Family</span>
+      </div>
+      <figure>
+        <div class="frame">
+          <img src="photos/attzbk4kn5ftonau09-tisvbulaqdeduvoxnc8p5kt3sso.jpg" alt="The team &mdash; Late 2025"
+               width="1200" height="900" loading="lazy" decoding="async">
+        </div>
+        <figcaption>Meeting with the loud, messy, ridiculous team. You and them somewhere in the middle &mdash; exactly where you felt belong and welcomed to the department.</figcaption>
+      </figure>
+    </section>
+    <section class="chapter reveal">
+      <div class="stamp">
+        <span class="date">Late 2025</span>
+        <span class="place">Before I could</span>
+      </div>
+      <figure>
+        <div class="frame">
+          <img src="photos/messenger_creation_c15819a6-deca-482b-9de3-74c2b37f10f2-1.jpg" alt="Before I could &mdash; Late 2025"
+               width="900" height="1200" loading="lazy" decoding="async">
+        </div>
+        <figcaption>You put the helmet on my head before I reached for it. You take care of me like it&#x27;s the most natural thing you do.</figcaption>
+      </figure>
+    </section>
+    <section class="chapter reveal">
+      <div class="stamp">
+        <span class="date">Sometime in 2025</span>
+        <span class="place">Date unknown</span>
+      </div>
+      <figure>
+        <div class="frame">
+          <img src="photos/img_1237-1.jpg" alt="Date unknown &mdash; Sometime in 2025"
+               width="1200" height="900" loading="lazy" decoding="async">
+        </div>
+        <figcaption>The wind took your hair, the sun took the picture, and you looked perfect anyway.</figcaption>
+      </figure>
+    </section>
+    <section class="chapter reveal">
+      <div class="stamp">
+        <span class="date">December 13, 2025</span>
+        <span class="place">Dinner</span>
+      </div>
+      <figure>
+        <div class="frame">
+          <img src="photos/img_6456.jpg" alt="Dinner &mdash; December 13, 2025"
+               width="900" height="1200" loading="lazy" decoding="async">
+        </div>
+        <figcaption>You, a table full of food, and that exact look you get right before the first bite.</figcaption>
+      </figure>
+    </section>
+    <section class="chapter reveal">
+      <div class="stamp">
+        <span class="date">Hard Hatting Ceremony</span>
+        <span class="place">Our Hallway</span>
+      </div>
+      <figure>
+        <div class="frame">
+          <img src="photos/attguzy0fsyqanhv9_cra_xggj9bftvlvd7ff7mjnzu6t4-1.jpg" alt="Out somewhere &mdash; A night, date unknown"
+               width="900" height="1200" loading="lazy" decoding="async">
+        </div>
+        <figcaption>Thank you for accompanying me with my hard hatting ceremony Babyyy, you made it so special. even before the ceremony you were there during my thesis defense. i hope i could do that to you soon when its your turn.</figcaption>
+      </figure>
+    </section>
+    <section class="chapter reveal">
+      <div class="stamp">
+        <span class="date">A night, date unknown</span>
+        <span class="place">Just for you</span>
+      </div>
+      <figure>
+        <div class="frame">
+          <img src="photos/attarlkyr59xkpqtmliksbabnjfl0asnz470gqcj5r01so-1.jpg" alt="Just for you &mdash; A night, date unknown"
+               width="900" height="1200" loading="lazy" decoding="async">
+        </div>
+        <figcaption>The light, the dress, the way you looked straight into the camera. This one is only on this page.</figcaption>
+      </figure>
+    </section>
+    <section class="chapter reveal">
+      <div class="stamp">
+        <span class="date">April 15, 2026</span>
+        <span class="place">That lantern</span>
+      </div>
+      <figure>
+        <div class="frame">
+          <img src="photos/img_8123-1.jpg" alt="That lantern &mdash; April 15, 2026"
+               width="900" height="1200" loading="lazy" decoding="async">
+        </div>
+        <figcaption>That orange lantern, that red top, and you pretending for one second that you weren&#x27;t posing. I love you, baby.</figcaption>
+      </figure>
+    </section>
+    <section class="chapter reveal">
+      <div class="stamp">
+        <span class="date">June 28, 2026</span>
+        <span class="place">At home</span>
+      </div>
+      <figure class="wide">
+        <div class="frame">
+          <img src="photos/img_8953-1.jpg" alt="At home &mdash; June 28, 2026"
+               width="1200" height="902" loading="lazy" decoding="async">
+        </div>
+        <figcaption>No lanyards. No events. Just you, at home, holding on. This is the one I keep coming back to.</figcaption>
+      </figure>
+    </section>
+    <section class="chapter reveal">
+      <div class="stamp">
+        <span class="date">August 29, 2026</span>
+        <span class="place">Fluffy love</span>
+      </div>
+      <figure>
+        <div class="frame">
+          <img src="photos/img_9467.jpg" alt="Fluffy love &mdash; August 29, 2026"
+               width="900" height="1200" loading="lazy" decoding="async">
+        </div>
+        <figcaption>You held that fox like you were already planning our future. I love you, baby.</figcaption>
+      </figure>
+    </section>
+    <section class="chapter reveal">
+      <div class="stamp">
+        <span class="date">August 29, 2026</span>
+        <span class="place">Same day, same mall</span>
+      </div>
+      <figure>
+        <div class="frame">
+          <img src="photos/img_9039.jpg" alt="Same day, same mall &mdash; August 29, 2026"
+               width="900" height="1200" loading="lazy" decoding="async">
+        </div>
+        <figcaption>You made that face. I gave you a thumbs up anyway. I love you, baby.</figcaption>
+      </figure>
+    </section>
+  </div>
+
+  <footer class="closing wrap reveal">
+    <h2>It&#x27;s us against the world</h2>
+    <p>Every lanyard, every late event, every corridor and every dinner in between &mdash; that was always the whole point. Not the places. Us.</p>
+    <p class="sign">Always, Andria.</p>
+  </footer>
+
+</main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo">
+  <button type="button" aria-label="Close">&times;</button>
+  <img alt="">
+</div>
+
+<script>
+(function () {
+  var reveal = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    reveal.forEach(function (el) { io.observe(el); });
+  } else {
+    reveal.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  var box = document.getElementById('lightbox');
+  var big = box.querySelector('img');
+  var frames = document.querySelectorAll('.frame');
+
+  function open(src, alt) {
+    big.src = src;
+    big.alt = alt || '';
+    box.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    box.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  frames.forEach(function (f) {
+    f.setAttribute('tabindex', '0');
+    f.setAttribute('role', 'button');
+    var go = function () {
+      var img = f.querySelector('img');
+      open(img.getAttribute('src'), img.getAttribute('alt'));
+    };
+    f.addEventListener('click', go);
+    f.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  box.addEventListener('click', close);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') close();
+  });
+})();
+</script>
+</body>
+</html>

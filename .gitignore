@@ -1,0 +1,12 @@
+# Original source photos (~25 MB) live at the repo root and are NOT part of
+# the published site -- photos/ holds the converted, resized, EXIF-stripped
+# copies that actually get served. Keep your own backup of the originals
+# somewhere safe: tools/preprocess.py needs them to regenerate photos/.
+/*.JPG
+/*.JPEG
+/*.PNG
+/*.HEIC
+/att.*
+
+__pycache__/
+*.pyc
